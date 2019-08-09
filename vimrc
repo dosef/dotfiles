@@ -7,6 +7,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vitalk/vim-simple-todo'
+Plugin 'w0rp/ale'
 call vundle#end()
 filetype plugin indent on
 
@@ -45,6 +46,10 @@ let mapleader = ","
 " Higlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey
 match ExtraWhitespace /\s\+$/
+
+" Colorcolumn
+set colorcolumn=81
+highlight colorcolumn ctermbg=white
 
 " Configure statusline
 set laststatus=2
