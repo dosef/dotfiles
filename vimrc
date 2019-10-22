@@ -3,29 +3,37 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vitalk/vim-simple-todo'
 Plugin 'w0rp/ale'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
 
 " Gitgutter
 set updatetime=100
 
-" Gruvbox
+" Colors
 colorscheme ron
-set background=dark
+let g:airline_theme='badwolf'
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
 highlight GitGutterChangeDelete ctermfg=blue
 highlight GitGutterDelete ctermfg=red
+highlight clear LineNr
 
 " Line numbers
 set number
 set relativenumber
-highlight linenr ctermfg=darkgrey
+highlight linenr ctermfg=grey
+"highlight LineNr ctermfg=grey ctermbg=white
 
 " Various configurations
 set shiftwidth=4
@@ -47,21 +55,24 @@ let mapleader = ","
 highlight ExtraWhitespace ctermbg=grey
 match ExtraWhitespace /\s\+$/
 
-" Colorcolumn
-set colorcolumn=81
-highlight colorcolumn ctermbg=white
-
-" Configure statusline
-set laststatus=2
-set statusline=%f
-highlight statusline ctermfg=black ctermbg=white
+" Highlight too long lines
+2mat ErrorMsg '\%81v.'
+"set colorcolumn=81
+"highlight colorcolumn ctermbg=white
 
 " Mappings
-map <C-n> :NERDTreeToggle<CR>
 map <C-l> :bnext<CR>
 map <C-h> :bprev<CR>
 map <C-q> :bd<CR>
 tnoremap <Esc> <C-\><C-n>
+
+" File browser
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+map <silent> <C-N> :NERDTreeToggle<CR>
 
 " LUA
 autocmd FileType lua setlocal shiftwidth=2 softtabstop=2
