@@ -10,6 +10,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
 
@@ -20,17 +21,13 @@ let g:airline#extensions#tabline#enabled = 1
 set updatetime=100
 
 " Colors
-colorscheme ron
-let g:airline_theme='night_owl'
-highlight GitGutterAdd ctermfg=green
-highlight GitGutterChange ctermfg=blue
-highlight GitGutterChangeDelete ctermfg=blue
-highlight GitGutterDelete ctermfg=red
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Line numbers
 set number
 set relativenumber
-highlight lineNr ctermfg=grey
 
 " Various configurations
 set shiftwidth=4
@@ -53,8 +50,6 @@ match ExtraWhitespace /\s\+$/
 
 " Highlight too long lines
 2mat ErrorMsg '\%81v.'
-"set colorcolumn=81
-"highlight colorcolumn ctermbg=white
 
 " Mappings
 map <C-l> :bnext<CR>
