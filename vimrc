@@ -10,7 +10,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
@@ -47,7 +46,6 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-let mapleader = ","
 
 " Higlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey
@@ -62,9 +60,19 @@ match ExtraWhitespace /\s\+$/
 map <C-l> :bnext<CR>
 map <C-h> :bprev<CR>
 map <C-q> :bd<CR>
-nmap <silent> <C-N> :NERDTreeToggle<CR>
 
 set nocursorline
 
+" Netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+map <C-n> :Lexplore<CR>
+
 " LUA
 autocmd FileType lua setlocal shiftwidth=2 softtabstop=2
+
+" Copy to clipboard
+set clipboard=unnamedplus
