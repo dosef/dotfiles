@@ -8,7 +8,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
