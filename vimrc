@@ -22,6 +22,8 @@ highlight ALEErrorSign ctermfg=1
 highlight ALEWarningSign ctermfg=3
 highlight clear SignColumn
 
+set updatetime=250
+
 " Various configurations
 set shiftwidth=4
 set softtabstop=4
