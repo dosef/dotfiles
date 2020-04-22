@@ -6,15 +6,12 @@ call vundle#begin()
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 
 " Colors
 syntax enable
-set background=dark
-colorscheme gruvbox
-highlight GitGutterAdd    ctermfg=2
+highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
@@ -39,6 +36,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set number
+set relativenumber
 
 " Highlight too long lines
 2mat ErrorMsg '\%81v.'
