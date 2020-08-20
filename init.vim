@@ -6,10 +6,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'valloric/youcompleteme'
 call plug#end()
-let g:deoplete#enable_at_startup = 1
 
+let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.8.0/src'
 
 colorscheme gruvbox
 
@@ -28,13 +28,10 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \}
 
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let g:NERDTreeGitStatusUseNerdFonts = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
