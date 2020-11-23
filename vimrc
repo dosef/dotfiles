@@ -1,17 +1,18 @@
-call plug#begin('~/.vim/plugged')
-Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'ayu-theme/ayu-vim'
-Plug 'w0rp/ale'
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'wincent/terminus'
-Plug 'chun-yang/auto-pairs'
-Plug 'kien/ctrlp.vim'
-call plug#end()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'morhetz/gruvbox'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'w0rp/ale'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'wincent/terminus'
+Plugin 'chun-yang/auto-pairs'
+Plugin 'kien/ctrlp.vim'
+call vundle#end()
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -34,6 +35,7 @@ let g:ale_fixers = {
 
 " Colors
 colorscheme gruvbox
+set background=dark
 syntax enable
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
