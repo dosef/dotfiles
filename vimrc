@@ -14,6 +14,8 @@ Plugin 'chun-yang/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
+packadd termdebug
+
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
