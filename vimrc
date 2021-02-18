@@ -8,9 +8,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'wincent/terminus'
-Plugin 'chun-yang/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
@@ -25,7 +23,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Ale
